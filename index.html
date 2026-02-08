@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhang Lab - Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Zhang Lab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/leader.html">Lab Leader</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/join.html">Join Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- 欢迎区域 -->
+        <section class="hero-section">
+            <!-- 动态波浪背景 -->
+            <div class="wave-background">
+                <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
+                </svg>
+                <svg class="wave wave2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="row align-items-center min-vh-80">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <div class="hero-badge mb-4">
+                            <span class="badge-custom">北京大学药学院</span>
+                        </div>
+                        <h1 class="lab-title mb-4">Zhang Lab</h1>
+                        <p class="hero-subtitle mb-4">G Protein-Coupled Receptor Research</p>
+                        <p class="hero-description mb-5">
+                            GPCR药理解析 • 受体改造 • 药物发现
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="pages/research.html" class="btn btn-primary-custom btn-lg me-3">
+                                探索研究
+                            </a>
+                            <a href="pages/join.html" class="btn btn-outline-custom btn-lg">
+                                加入我们
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GPCR和DREADD图片展示 -->
+        <section class="research-highlights py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Research Highlights</h2>
+                <div class="row g-4">
+                    <!-- GPCR动态结构图 -->
+                    <div class="col-lg-6">
+                        <div class="highlight-card">
+                            <div class="highlight-image">
+                                <img src="images/Structure.png" alt="GPCR Dynamic Structure">
+                            </div>
+                            <div class="highlight-caption">
+                                <h5>GPCR结构机制解析</h5>
+                                <p class="text-muted mb-0">G蛋白偶联受体的动态结构展示了受体激活过程中的构象变化</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DREADD示意图 -->
+                    <div class="col-lg-6">
+                        <div class="highlight-card">
+                            <div class="highlight-image">
+                                <img src="images/dreadd.png" alt="DREADD Schematic">
+                            </div>
+                            <div class="highlight-caption">
+                                <h5>DREADD化学遗传学工具</h5>
+                                <p class="text-muted mb-0">设计受体由特异性药物（DREADDs）激活用于神经环路的精准调控</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer py-4 bg-white border-top mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-muted">&copy; 2024 Zhang Lab. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="mailto:zhangshicheng@hsc.pku.edu.cn" class="text-muted text-decoration-none me-3">Contact</a>
+                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
