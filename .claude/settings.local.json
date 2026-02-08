@@ -9,7 +9,12 @@
       "Bash(git init:*)",
       "Bash(git branch:*)",
       "Bash(git config:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(push_to_github.sh << 'EOF'\n#!/bin/bash\necho \"============================================\"\necho \"推送 Zhang Lab 网站到 GitHub\"\necho \"============================================\"\necho \"\"\necho \"你需要一个GitHub Personal Access Token\"\necho \"如果还没有，请按以下步骤获取：\"\necho \"\"\necho \"1. 在浏览器打开: https://github.com/settings/tokens/new\"\necho \"2. 填写信息：\"\necho \"   Note: Lab Website\"\necho \"   Expiration: 选择 'No expiration' 或 '90 days'\"\necho \"   勾选: ☑ repo \\(勾选整个repo权限\\)\"\necho \"3. 点击绿色按钮 'Generate token'\"\necho \"4. 复制生成的token \\(以ghp_开头的长字符串\\)\"\necho \"\"\nread -p \"按回车键继续推送...\"\necho \"\"\necho \"正在推送到 GitHub...\"\ngit push -u origin main\nEOF)",
+      "Bash(chmod:*)",
+      "Bash(git push)"
     ]
   }
 }
