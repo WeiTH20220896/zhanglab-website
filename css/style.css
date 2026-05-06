@@ -1447,6 +1447,12 @@ html {
     display: block;
 }
 
+.news-image-wechat {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .news-content {
     font-size: 1.06rem;
     line-height: 1.78;
