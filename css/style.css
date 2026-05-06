@@ -787,6 +787,11 @@ html {
     background: #fff;
 }
 
+/* Make the first research direction image (GPCR Structural Biology) larger */
+.research-direction-card:first-of-type .direction-image img {
+    height: 560px;
+}
+
 /* Join page layout fixes */
 .join-intro p,
 .position-card p,
