@@ -3,146 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhang Lab - Home</title>
+    <meta name="description" content="Zhang Lab at Peking University studies GPCR structural biology, DREADD tool development, and neurological drug discovery.">
+    <title>Zhang Lab | GPCR Neuropharmacology</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary navigation">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Zhang Lab</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html" aria-label="Zhang Lab home">
+                <span class="brand-signal" aria-hidden="true">7TM</span>
+                <span>Zhang Lab</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/members.html">Members</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/join.html">Join Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Lab Life</a></li>
+                    <li class="nav-item"><a class="nav-link nav-join" href="pages/join.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link language-switch" href="cn/index.html" lang="zh-CN" hreflang="zh-CN">中文</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 主要内容 -->
     <main class="main-content">
-        <!-- 欢迎区域 -->
         <section class="hero-section">
-            <!-- 动态波浪背景 -->
-            <div class="wave-background">
-                <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
-                </svg>
-                <svg class="wave wave2" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
-                </svg>
-            </div>
             <div class="container">
-                <div class="row align-items-center min-vh-80">
-                    <div class="col-lg-10 mx-auto text-center">
-                        <div class="hero-badge mb-4">
-                            <span class="badge-custom">School of Pharmaceutical Sciences, Peking University</span>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="section-kicker">Peking University · School of Pharmaceutical Sciences</p>
+                        <h1 class="lab-title">Signals become<br><em>possibilities.</em></h1>
+                        <p class="hero-subtitle">We study how G protein-coupled receptors sense, signal, and can be engineered into better tools and medicines.</p>
+                        <div class="hero-actions">
+                            <a href="pages/research.html" class="btn btn-primary-custom">Explore our research <span aria-hidden="true">&rarr;</span></a>
+                            <a href="pages/publications.html" class="text-link">Read our publications <span aria-hidden="true">↗</span></a>
                         </div>
-                        <h1 class="lab-title mb-4">Zhang Lab</h1>
-                        <p class="hero-subtitle mb-4">G Protein-Coupled Receptor Research</p>
-                        <p class="hero-description mb-5">
-                            GPCR Pharmacology &bull; Receptor Engineering &bull; Drug Discovery
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="pages/research.html" class="btn btn-primary-custom btn-lg me-3">
-                                Explore Research
-                            </a>
-                            <a href="pages/join.html" class="btn btn-outline-custom btn-lg me-3">
-                                Join Us
-                            </a>
-                            <a href="enhanced/index.html" class="btn btn-outline-secondary btn-lg">
-                                Enter Enhanced UI
-                            </a>
+                        <ul class="research-index" aria-label="Research areas">
+                            <li>Structural biology</li>
+                            <li>DREADD tools</li>
+                            <li>Neurotherapeutics</li>
+                        </ul>
+                    </div>
+
+                    <aside class="receptor-figure molecular-animation" data-gpcr-language="en" aria-label="Forty-five second 3D animation of agonist-driven Class A GPCR activation, G-protein coupling, nucleotide exchange, and cAMP signaling">
+                        <div class="molecular-toolbar">
+                            <span>CLASS A GPCR ACTIVATION</span>
+                            <button class="molecular-playback" type="button" aria-label="Pause animation"><span aria-hidden="true">Ⅱ</span></button>
+                        </div>
+                        <div class="molecular-viewport">
+                            <canvas class="gpcr-canvas" aria-hidden="true"></canvas>
+                            <div class="molecular-fallback"><span>Preparing molecular scene</span></div>
+                            <div class="molecular-axis" aria-hidden="true"><span>Extracellular</span><span>Intracellular</span></div>
+                            <p class="molecular-phase" aria-live="polite">Inactive GPCR</p>
+                            <div class="motif-callouts" aria-hidden="true">
+                                <span data-motif="d332">D3.32</span><span data-motif="w648">W6.48</span><span data-motif="dry">DRY</span><span data-motif="npxxy">NPxxY</span>
+                            </div>
+                            <div class="interaction-key" aria-hidden="true"><span class="key-hbond">Hydrogen bond</span><span class="key-ionic">Ionic</span><span class="key-hydrophobic">Hydrophobic</span></div>
+                            <p class="molecular-detail" aria-hidden="true"></p>
+                        </div>
+                        <div class="molecular-timeline" aria-hidden="true">
+                            <span data-phase="inactive">Inactive GPCR</span><span data-phase="binding">Agonist binding</span><span data-phase="active">Active GPCR</span><span data-phase="coupling">G protein coupling</span><span data-phase="signal">Signal transduction</span>
+                            <i class="molecular-progress"></i>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="publication-feature" aria-labelledby="latest-publication-title">
+            <div class="container">
+                <div class="publication-feature-grid">
+                    <div class="publication-stamp">
+                        <span class="stamp-day">03</span>
+                        <span class="stamp-month">JUN 2026</span>
+                        <span class="stamp-label">Published</span>
+                    </div>
+                    <div class="publication-feature-copy">
+                        <p class="section-kicker">Latest publication · npj Drug Discovery</p>
+                        <h2 id="latest-publication-title">Mechanistic and therapeutic insights into class A GPCR dimers in neuropsychiatric disorders</h2>
+                        <p class="publication-authors"><strong>Zhaojing Wang</strong>, Linlin Wang &amp; Shicheng Zhang</p>
+                        <p>Led by 2024-cohort PhD student Zhaojing Wang as first author, this review connects GPCR dimer structure, signaling pharmacology, and therapeutic opportunities in neuropsychiatric disease.</p>
+                        <div class="publication-links">
+                            <a href="https://doi.org/10.1038/s44386-026-00049-2" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom">Read the article <span aria-hidden="true">↗</span></a>
+                            <a href="pages/publications.html" class="text-link">Publication details <span aria-hidden="true">&rarr;</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GPCR和DREADD图片展示 -->
-        <section class="research-highlights py-5">
+        <section class="research-highlights" aria-labelledby="research-highlights-title">
             <div class="container">
-                <h2 class="section-title text-center mb-5">Research Highlights</h2>
-                <div class="row g-4">
-                    <!-- GPCR动态结构图 -->
-                    <div class="col-lg-6">
-                        <div class="highlight-card">
-                            <div class="highlight-image">
-                                <img src="images/Structure.png" alt="GPCR Dynamic Structure">
-                            </div>
-                            <div class="highlight-caption">
-                                <h5>GPCR Structural Mechanism</h5>
-                                <p class="text-muted mb-0">Dynamic structures of G protein-coupled receptors reveal conformational changes during receptor activation</p>
-                            </div>
-                        </div>
+                <div class="section-heading-row">
+                    <div>
+                        <p class="section-kicker">Questions we pursue</p>
+                        <h2 id="research-highlights-title" class="section-title">From receptor motion to new pharmacology</h2>
                     </div>
-
-                    <!-- DREADD示意图 -->
-                    <div class="col-lg-6">
-                        <div class="highlight-card">
-                            <div class="highlight-image">
-                                <img src="images/dreadd.png" alt="DREADD Schematic">
-                            </div>
-                            <div class="highlight-caption">
-                                <h5>DREADD Chemogenetic Tools</h5>
-                                <p class="text-muted mb-0">Designer Receptors Exclusively Activated by Designer Drugs (DREADDs) enable precise control of neural circuits</p>
-                            </div>
+                    <a href="pages/research.html" class="text-link">Research overview <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="research-card-grid research-card-grid-three">
+                    <article class="highlight-card">
+                        <div class="highlight-image">
+                            <img src="images/Structure.png" alt="Structural model illustrating GPCR conformational mechanisms" loading="lazy">
                         </div>
+                        <div class="highlight-caption">
+                            <p class="card-label">Structural mechanism</p>
+                            <h3>How receptors move</h3>
+                            <p>Resolving the conformational changes that connect ligand recognition to receptor activation.</p>
+                        </div>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-image">
+                            <img src="images/dreadd.png" alt="Schematic of DREADD chemogenetic tools" loading="lazy">
+                        </div>
+                        <div class="highlight-caption">
+                            <p class="card-label">Chemogenetics</p>
+                            <h3>How receptors become tools</h3>
+                            <p>Engineering selective receptor–ligand systems for precise control of cells and neural circuits.</p>
+                        </div>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-image">
+                            <img src="images/VS.jpg" alt="Computer-aided workflow for neurological drug discovery" loading="lazy">
+                        </div>
+                        <div class="highlight-caption">
+                            <p class="card-label">Neurotherapeutics</p>
+                            <h3>How mechanisms become medicines</h3>
+                            <p>Combining virtual screening and pharmacological profiling to discover compounds for neurological disease.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-life-feature" aria-labelledby="lab-life-title">
+            <div class="container">
+                <div class="lab-life-grid">
+                    <div class="lab-life-photo">
+                        <img src="images/graduation-2026.jpg" alt="Zhang Lab members celebrating the graduation of Liu Rongxi and Ming Lang outside the Pharmaceutical Sciences Building" loading="lazy">
+                        <span class="photo-note">Summer 2026 · Undergraduate milestone</span>
+                    </div>
+                    <div class="lab-life-copy">
+                        <p class="section-kicker">Lab life · Graduation</p>
+                        <h2 id="lab-life-title">A milestone, not a farewell</h2>
+                        <p>Congratulations to six-year program students <strong>Liu Rongxi</strong> and <strong>Ming Lang</strong> on completing their undergraduate stage. They will continue their training and research with Zhang Lab.</p>
+                        <blockquote>May this milestone renew your curiosity and confidence as we continue exploring the questions ahead—together.</blockquote>
+                        <a href="pages/news.html" class="text-link">More from the lab <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer py-4 bg-white border-top mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0 text-muted">&copy; 2024 Zhang Lab. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="mailto:zhangshicheng@hsc.pku.edu.cn" class="text-muted text-decoration-none me-3">Contact</a>
-                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
-                </div>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="footer-brand" href="index.html">Zhang Lab</a>
+                <p>Structural biology · DREADD tools · Neurotherapeutics</p>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:zhangshicheng@hsc.pku.edu.cn">zhangshicheng@hsc.pku.edu.cn</a>
+                <span>&copy; 2026 Zhang Lab</span>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="js/gpcr-animation.js"></script>
 </body>
 </html>

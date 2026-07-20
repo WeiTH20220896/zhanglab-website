@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhang Lab - Join Us</title>
+    <meta name="description" content="Join Zhang Lab to study GPCR structural biology, DREADD tools, and neurological drug discovery.">
+    <title>Zhang Lab | Join Us</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,30 +21,19 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Primary navigation">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../index.html">Zhang Lab</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html" aria-label="Zhang Lab home"><span class="brand-signal" aria-hidden="true">7TM</span><span>Zhang Lab</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="members.html">Members</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="join.html">Join Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Lab Life</a></li>
+                    <li class="nav-item"><a class="nav-link nav-join active" href="join.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link language-switch" href="../cn/pages/join.html" lang="zh-CN" hreflang="zh-CN">中文</a></li>
                 </ul>
             </div>
         </div>
@@ -51,17 +41,12 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Page Header -->
-        <section class="page-header py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto text-center">
-                        <h1 class="display-4 fw-bold mb-3">Join Us</h1>
-                        <p class="lead text-muted">Welcome to Join the Zhang Lab Team</p>
-                    </div>
-                </div>
+        <header class="page-header">
+            <div class="container page-header-grid">
+                <div><p class="section-kicker">Build the next experiment</p><h1>Join Us</h1></div>
+                <p>Work across GPCR structural biology, DREADD tool development, and neurological drug discovery in a collaborative research environment.</p>
             </div>
-        </section>
+        </header>
 
         <!-- Intro -->
         <section class="join-intro py-5">
@@ -72,7 +57,7 @@
                             Zhang Lab is continuously recruiting talented individuals passionate about GPCR neuropharmacology
                         </p>
                         <p class="text-muted">
-                            We are dedicated to GPCR pharmacological elucidation, receptor engineering, and drug discovery research, providing team members with an excellent research environment and development platform.
+                            Our core directions are GPCR structural biology, DREADD chemogenetic tool development, and neurological drug discovery. We value careful experiments, open discussion, and research that connects mechanism with therapeutic possibility.
                         </p>
                     </div>
                 </div>
@@ -136,9 +121,8 @@
                                     <h5 class="fw-bold mb-3 mt-4">Research Directions</h5>
                                     <ul class="benefits-list">
                                         <li>GPCR structural biology and signal transduction</li>
-                                        <li>Chemogenetic tool development</li>
-                                        <li>Computation-guided drug discovery</li>
-                                        <li>Molecular pharmacology screening platform development and optimization</li>
+                                        <li>DREADD chemogenetic tool development</li>
+                                        <li>Neurological drug discovery and pharmacological profiling</li>
                                     </ul>
                                 </div>
                             </div>
@@ -230,18 +214,10 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer py-4 bg-white border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0 text-muted">&copy; 2024 Zhang Lab. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="mailto:zhangshicheng@hsc.pku.edu.cn" class="text-muted text-decoration-none me-3">Contact</a>
-                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><a class="footer-brand" href="../index.html">Zhang Lab</a><p>Structural biology · DREADD tools · Neurotherapeutics</p></div>
+            <div class="footer-contact"><a href="mailto:zhangshicheng@hsc.pku.edu.cn">zhangshicheng@hsc.pku.edu.cn</a><span>&copy; 2026 Zhang Lab</span></div>
         </div>
     </footer>
 

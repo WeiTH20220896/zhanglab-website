@@ -14,3 +14,12 @@ __pycache__/
 
 # 系统文件
 Thumbs.db
+
+# 本地凭证与内部资料（禁止提交）
+Github*token*.txt
+*.env
+*.env.*
+*.pem
+*.key
+Members/*.txt
+Members/*.docx
