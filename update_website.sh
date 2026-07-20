@@ -146,7 +146,30 @@ git commit -m "$commit_msg"
 
 echo ""
 echo "正在推送到 origin/main……"
-git push origin main
+
+# This Windows installation cannot reliably reach GitHub through Git's
+# schannel backend. Use Git for Windows' OpenSSL backend instead. If the local
+# ignored token file exists, use it only in memory for this single push.
+token_file="Github——tokens.txt"
+github_token=""
+auth_header=""
+
+if [[ -f "$token_file" ]]; then
+    github_token="$(grep -Eo 'github_pat_[A-Za-z0-9_]+|gh[pousr]_[A-Za-z0-9]+' "$token_file" | head -n 1 || true)"
+fi
+
+if [[ -n "$github_token" ]]; then
+    auth_header="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$github_token" | base64 | tr -d '\r\n')"
+    GIT_CONFIG_COUNT=1 \
+    GIT_CONFIG_KEY_0='http.extraHeader' \
+    GIT_CONFIG_VALUE_0="$auth_header" \
+        git -c http.sslBackend=openssl push origin main
+else
+    git -c http.sslBackend=openssl push origin main
+fi
+
+github_token=""
+auth_header=""
 
 echo ""
 echo "========================================"
