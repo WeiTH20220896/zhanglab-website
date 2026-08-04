@@ -4998,9 +4998,11 @@ body.motion-ready .main-content > :first-child.reveal-target {
 
 .publication-figure {
     position: relative;
+    width: 100%;
     max-width: 860px;
     margin: 2rem 0;
     padding: 1rem;
+    overflow: hidden;
     background: #fff;
     border: 1px solid var(--border-color);
 }
