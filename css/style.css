@@ -5010,8 +5010,8 @@ body.motion-ready .main-content > :first-child.reveal-target {
 .publication-figure img {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: none;
+    height: clamp(420px, 68vh, 680px);
+    max-height: 680px;
     object-fit: contain;
 }
 
@@ -5043,6 +5043,7 @@ body.motion-ready .main-content > :first-child.reveal-target {
 
 @media (max-width: 680px) {
     .publication-figure { padding: 0.55rem; }
+    .publication-figure img { height: clamp(360px, 62vh, 520px); }
 }
 
 .molecular-timeline > span {
