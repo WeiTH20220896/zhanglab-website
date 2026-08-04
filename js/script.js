@@ -2,6 +2,44 @@
 // 页面加载完成后执行
 
 document.addEventListener('DOMContentLoaded', function() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // A quiet reading-progress signal shared by every page.
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    progressBar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(progressBar);
+
+    function updateReadingProgress() {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+        progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+    }
+
+    window.addEventListener('scroll', updateReadingProgress, { passive: true });
+    updateReadingProgress();
+
+    // Section reveals preserve the page if JavaScript or motion is unavailable.
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+        const revealElements = document.querySelectorAll(
+            'main > section, main > header, .research-pillar, .activity-row, .publication-entry'
+        );
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.body.classList.add('motion-ready');
+        revealElements.forEach(element => {
+            element.classList.add('reveal-target');
+            revealObserver.observe(element);
+        });
+    }
+
     // ==========================================
     // 导航栏滚动效果
     // ==========================================
@@ -120,6 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         button.innerHTML = '<i class="bi bi-arrow-up"></i>';
         button.className = 'back-to-top';
+        button.type = 'button';
+        button.setAttribute('aria-label', 'Back to top');
         button.style.cssText = `
             position: fixed;
             bottom: 30px;
@@ -171,6 +211,77 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         });
     });
+
+    // ==========================================
+    // Publications: copy a formatted citation
+    // ==========================================
+    document.querySelectorAll('.citation-copy').forEach(button => {
+        button.addEventListener('click', async function() {
+            const citation = this.dataset.citation;
+            const label = this.querySelector('span');
+            const isChinesePage = document.documentElement.lang.toLowerCase().startsWith('zh');
+
+            try {
+                await navigator.clipboard.writeText(citation);
+                label.textContent = isChinesePage ? '引文已复制' : 'Citation copied';
+                this.classList.add('is-copied');
+                window.setTimeout(() => {
+                    label.textContent = isChinesePage ? '复制引文' : 'Copy citation';
+                    this.classList.remove('is-copied');
+                }, 2200);
+            } catch (error) {
+                label.textContent = isChinesePage ? '请手动选择上方引文' : 'Select citation above';
+            }
+        });
+    });
+
+    // Scientific figures open at the largest available resolution.
+    const zoomableFigures = document.querySelectorAll(
+        '.highlight-image img, .pillar-visual img, .publication-figure img, .activity-media img'
+    );
+    if (zoomableFigures.length) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'image-lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.setAttribute('aria-label', document.documentElement.lang.startsWith('zh') ? '科研图像大图预览' : 'Expanded scientific figure');
+        lightbox.innerHTML = '<button type="button" aria-label="Close">&times;</button><img alt="">';
+        document.body.appendChild(lightbox);
+
+        const expandedImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('button');
+        let returnFocus = null;
+        const closeLightbox = () => {
+            lightbox.classList.remove('is-open');
+            document.body.style.overflow = '';
+            if (returnFocus) returnFocus.focus();
+        };
+
+        zoomableFigures.forEach(figure => {
+            figure.classList.add('scientific-zoomable');
+            figure.tabIndex = 0;
+            figure.setAttribute('role', 'button');
+            figure.setAttribute('aria-label', `${figure.alt}. ${document.documentElement.lang.startsWith('zh') ? '点击查看大图' : 'Open full-size figure'}`);
+            const openLightbox = () => {
+                returnFocus = figure;
+                expandedImage.src = figure.currentSrc || figure.src;
+                expandedImage.alt = figure.alt;
+                lightbox.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+                closeButton.focus();
+            };
+            figure.addEventListener('click', openLightbox);
+            figure.addEventListener('keydown', event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openLightbox();
+                }
+            });
+        });
+        closeButton.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', event => { if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox(); });
+    }
 
     // ==========================================
     // 表单验证（订阅表单）

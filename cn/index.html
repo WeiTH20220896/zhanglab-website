@@ -1,148 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhang Lab - Home</title>
+    <meta name="description" content="北京大学张世成课题组聚焦GPCR结构生物学、DREADD化学遗传学工具开发与神经药物开发。">
+    <title>张世成课题组｜GPCR神经药理学</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+<body class="site-cn">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="主导航">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Zhang Lab</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="index.html" aria-label="张世成课题组首页"><span class="brand-signal" aria-hidden="true">7TM</span><span>张世成课题组</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="展开导航"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/members.html">Members</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/join.html">Join Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/research.html">研究方向</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/publications.html">研究成果</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/members.html">团队成员</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/news.html">课题组动态</a></li>
+                    <li class="nav-item"><a class="nav-link nav-join" href="pages/join.html">加入我们</a></li>
+                    <li class="nav-item"><a class="nav-link language-switch" href="../index.html" lang="en" hreflang="en">EN</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 主要内容 -->
     <main class="main-content">
-        <!-- 欢迎区域 -->
         <section class="hero-section">
-            <!-- 动态波浪背景 -->
-            <div class="wave-background">
-                <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
-                </svg>
-                <svg class="wave wave2" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-path"></path>
-                </svg>
-            </div>
             <div class="container">
-                <div class="row align-items-center min-vh-80">
-                    <div class="col-lg-10 mx-auto text-center">
-                        <div class="hero-badge mb-4">
-                            <span class="badge-custom">School of Pharmaceutical Sciences, Peking University</span>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="section-kicker">北京大学药学院 · 天然药物及仿生药物全国重点实验室</p>
+                        <h1 class="lab-title">解析信号，<br><em>创造可能。</em></h1>
+                        <p class="hero-subtitle">我们研究G蛋白偶联受体如何感知并传递信号，进而将机制认知转化为更精准的研究工具与神经系统疾病治疗策略。</p>
+                        <div class="hero-actions">
+                            <a href="pages/research.html" class="btn btn-primary-custom">了解研究方向 <span aria-hidden="true">&rarr;</span></a>
+                            <a href="pages/publications.html" class="text-link">查看研究成果 <span aria-hidden="true">↗</span></a>
                         </div>
-                        <h1 class="lab-title mb-4">Zhang Lab</h1>
-                        <p class="hero-subtitle mb-4">G Protein-Coupled Receptor Research</p>
-                        <p class="hero-description mb-5">
-                            GPCR Pharmacology &bull; Receptor Engineering &bull; Drug Discovery
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="pages/research.html" class="btn btn-primary-custom btn-lg me-3">
-                                Explore Research
-                            </a>
-                            <a href="pages/join.html" class="btn btn-outline-custom btn-lg me-3">
-                                Join Us
-                            </a>
-                            <a href="../enhanced/index.html" class="btn btn-outline-secondary btn-lg">
-                                Enter Enhanced UI
-                            </a>
+                        <ul class="research-index" aria-label="研究方向">
+                            <li>GPCR结构生物学</li>
+                            <li>DREADD工具开发</li>
+                            <li>神经药物开发</li>
+                        </ul>
+                    </div>
+
+                    <aside class="receptor-figure molecular-animation" data-gpcr-language="zh" aria-label="乙酰胆碱识别、A类GPCR构象激活及受体与G蛋白偶联的科学动画">
+                        <div class="molecular-toolbar"><span>乙酰胆碱 · A类GPCR激活机制</span><button class="molecular-playback" type="button" aria-label="暂停动画"><span aria-hidden="true">Ⅱ</span></button></div>
+                        <div class="molecular-viewport">
+                            <canvas class="gpcr-canvas" aria-hidden="true"></canvas>
+                            <div class="molecular-fallback"><span>正在构建分子场景</span></div>
+                            <div class="molecular-axis" aria-hidden="true"><span>胞外侧</span><span>胞内侧</span></div>
+                            <p class="molecular-phase" aria-live="polite">非活化GPCR</p>
+                            <div class="motif-callouts" aria-hidden="true"><span data-motif="d332">D3.32</span><span data-motif="w648">W6.48</span><span data-motif="dry">DRY</span><span data-motif="npxxy">NPxxY</span></div>
+                            <div class="interaction-key" aria-hidden="true"><span class="key-hbond">氢键</span><span class="key-ionic">离子作用</span><span class="key-hydrophobic">疏水作用</span></div>
+                            <p class="molecular-detail" aria-hidden="true"></p>
+                        </div>
+                        <div class="molecular-timeline" aria-hidden="true">
+                            <span data-phase="inactive">非活化受体</span><span data-phase="binding">乙酰胆碱识别</span><span data-phase="active">构象激活</span><span data-phase="coupling">G蛋白偶联</span>
+                            <i class="molecular-progress"></i>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="publication-feature" aria-labelledby="latest-publication-title-cn">
+            <div class="container">
+                <div class="publication-feature-grid">
+                    <div class="publication-stamp"><span class="stamp-day">03</span><span class="stamp-month">2026年6月</span><span class="stamp-label">正式发表</span></div>
+                    <div class="publication-feature-copy">
+                        <p class="section-kicker">最新论文 · npj Drug Discovery</p>
+                        <h2 id="latest-publication-title-cn">神经精神疾病相关A类GPCR二聚体的机制与治疗学见解</h2>
+                        <p class="original-title">Mechanistic and therapeutic insights into class A GPCR dimers in neuropsychiatric disorders</p>
+                        <p class="publication-authors"><strong>王昭景</strong>、王琳琳、张世成</p>
+                        <p>2024级博士研究生王昭景为论文第一作者。该综述系统衔接GPCR二聚体的结构基础、信号药理学特征及其在神经精神疾病治疗中的潜在价值。</p>
+                        <div class="publication-links">
+                            <a href="https://doi.org/10.1038/s44386-026-00049-2" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom">阅读原文 <span aria-hidden="true">↗</span></a>
+                            <a href="pages/publications.html" class="text-link">查看论文信息 <span aria-hidden="true">&rarr;</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GPCR和DREADD图片展示 -->
-        <section class="research-highlights py-5">
+        <section class="research-highlights" aria-labelledby="research-highlights-title-cn">
             <div class="container">
-                <h2 class="section-title text-center mb-5">Research Highlights</h2>
-                <div class="row g-4">
-                    <!-- GPCR动态结构图 -->
-                    <div class="col-lg-6">
-                        <div class="highlight-card">
-                            <div class="highlight-image">
-                                <img src="images/Structure.png" alt="GPCR Dynamic Structure">
-                            </div>
-                            <div class="highlight-caption">
-                                <h5>GPCR Structural Mechanism</h5>
-                                <p class="text-muted mb-0">Dynamic structures of G protein-coupled receptors reveal conformational changes during receptor activation</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-heading-row">
+                    <div><p class="section-kicker">结构药理学与分子发现</p><h2 id="research-highlights-title-cn" class="section-title">研究方向</h2></div>
+                    <a href="pages/research.html" class="text-link">研究方向概览 <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="research-card-grid research-card-grid-three">
+                    <article class="highlight-card">
+                        <div class="highlight-image"><img src="../images/Structure.png" alt="GPCR构象与信号转导结构模型" loading="lazy"></div>
+                        <div class="highlight-caption"><p class="card-label">结构生物学</p><h3>看见受体如何运动</h3><p>解析配体识别、受体激活及下游信号转导过程中的关键构象变化。</p></div>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-image"><img src="../images/dreadd.png" alt="DREADD化学遗传学工具示意图" loading="lazy"></div>
+                        <div class="highlight-caption"><p class="card-label">化学遗传学</p><h3>将受体工程化为工具</h3><p>构建具有高选择性的受体—配体系统，实现对细胞与神经环路的精准调控。</p></div>
+                    </article>
+                    <article class="highlight-card">
+                        <div class="highlight-image"><img src="../images/VS.jpg" alt="神经药物计算筛选与发现流程" loading="lazy"></div>
+                        <div class="highlight-caption"><p class="card-label">神经药物开发</p><h3>让机制走向药物</h3><p>结合虚拟筛选与药理学评价，发现面向神经系统疾病的活性化合物。</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <!-- DREADD示意图 -->
-                    <div class="col-lg-6">
-                        <div class="highlight-card">
-                            <div class="highlight-image">
-                                <img src="images/dreadd.png" alt="DREADD Schematic">
-                            </div>
-                            <div class="highlight-caption">
-                                <h5>DREADD Chemogenetic Tools</h5>
-                                <p class="text-muted mb-0">Designer Receptors Exclusively Activated by Designer Drugs (DREADDs) enable precise control of neural circuits</p>
-                            </div>
-                        </div>
+        <section class="lab-life-feature" aria-labelledby="lab-life-title-cn">
+            <div class="container">
+                <div class="lab-life-grid">
+                    <div class="lab-life-photo">
+                        <img src="../images/graduation-2026.jpg" alt="张世成课题组成员在药学楼前庆祝刘镕郗和明朗取得阶段性进展" loading="lazy">
+                        <span class="photo-note">2026年夏 · 学业里程碑</span>
+                    </div>
+                    <div class="lab-life-copy">
+                        <p class="section-kicker">课题组动态 · 学业进展</p>
+                        <h2 id="lab-life-title-cn">这是里程碑，不是告别</h2>
+                        <p>祝贺<strong>刘镕郗</strong>、<strong>明朗</strong>在六年制培养中取得重要阶段性进展。二人将继续在课题组开展科研工作。</p>
+                        <blockquote>愿这份阶段性收获为你们增添信心与好奇心，让我们继续并肩探索前方的问题。</blockquote>
+                        <a href="pages/news.html" class="text-link">查看更多课题组动态 <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 页脚 -->
-    <footer class="footer py-4 bg-white border-top mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0 text-muted">&copy; 2024 Zhang Lab. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="mailto:zhangshicheng@hsc.pku.edu.cn" class="text-muted text-decoration-none me-3">Contact</a>
-                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><a class="footer-brand" href="index.html">张世成课题组</a><p>结构生物学 · DREADD工具 · 神经药物开发</p></div>
+            <div class="footer-contact"><a href="mailto:zhangshicheng@hsc.pku.edu.cn">zhangshicheng@hsc.pku.edu.cn</a><span>&copy; 2026 张世成课题组</span></div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="../js/gpcr-animation.js?v=20260804-7"></script>
 </body>
 </html>
