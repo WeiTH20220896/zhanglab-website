@@ -25,9 +25,11 @@ Members/*.txt
 Members/*.docx
 
 # Privacy: source biographies, personal portraits, and internal working copies
-Members/
+Members/*
+!Members/*-Photo.*
 cn/Members/
-Zhang/
+Zhang/*
+!Zhang/Photo.jpg
 zhang/
 cn/zhang/
 enhanced/
@@ -37,7 +39,5 @@ Research/
 **/个人资料.txt
 
 # Event photographs are retained locally only
-images/graduation-2026.jpg
-images/年终聚餐*.jpg
-年终聚餐*.jpg
+/年终聚餐*.jpg
 LRX_ML.jpg

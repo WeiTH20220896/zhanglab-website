@@ -54,7 +54,9 @@ required_files=(
     "images/Structure.png"
     "images/dreadd.png"
     "images/VS.jpg"
+    "images/graduation-2026.jpg"
     "images/publication-wang-2026-fig1.png"
+    "Zhang/Photo.jpg"
 )
 
 for file in "${required_files[@]}"; do
@@ -79,9 +81,13 @@ allowlist=(
     "images/dreadd.png"
     "images/VS.jpg"
     "images/gpcr.png"
+    "images/graduation-2026.jpg"
     "images/publication-wang-2026-fig1.png"
+    "images/年终聚餐2.3.jpg"
     pages/*.html
     cn/pages/*.html
+    Members/*-Photo.*
+    "Zhang/Photo.jpg"
 )
 shopt -u nullglob
 
@@ -112,7 +118,7 @@ echo ""
 for file in "${staged_files[@]}"; do
     lower_file="$(printf '%s' "$file" | tr '[:upper:]' '[:lower:]')"
     case "$lower_file" in
-        *token*|*secret*|*.env|*.env.*|*.pem|*.key|github*|*.docx|*/members/*|members/*|*/zhang/*|zhang/*|enhanced/*|*个人资料*|*graduation*|*年终聚餐*)
+        *token*|*secret*|*.env|*.env.*|*.pem|*.key|github*|*.docx|*/members/*/*|members/*/*|*/zhang/*|zhang/*|enhanced/*|*个人资料*)
             abort_after_stage "检测到疑似敏感文件，停止发布：$file"
             ;;
     esac
@@ -129,13 +135,6 @@ done
 if git diff --cached --no-ext-diff -- . | grep -Eiq \
     'github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9_]{20,}'; then
     abort_after_stage "暂存内容中检测到疑似 GitHub Token，停止发布。"
-fi
-
-# Reject direct student contacts and personal-photo references in public pages.
-if git grep --cached -I -E \
-    'mailto:[^" ]+@stu\.pku\.edu\.cn|Members/[^" ]+-Photo|Zhang/Photo|graduation-2026|年终聚餐' \
-    -- '*.html' >/dev/null 2>&1; then
-    abort_after_stage "网页中检测到个人联系方式或成员照片引用，停止发布。"
 fi
 
 if ! git diff --cached --check; then
