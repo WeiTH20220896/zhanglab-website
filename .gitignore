@@ -23,3 +23,21 @@ Github*token*.txt
 *.key
 Members/*.txt
 Members/*.docx
+
+# Privacy: source biographies, personal portraits, and internal working copies
+Members/
+cn/Members/
+Zhang/
+zhang/
+cn/zhang/
+enhanced/
+Join US/
+Research/
+*.docx
+**/个人资料.txt
+
+# Event photographs are retained locally only
+images/graduation-2026.jpg
+images/年终聚餐*.jpg
+年终聚餐*.jpg
+LRX_ML.jpg
