@@ -81,11 +81,24 @@ for atom in active:
         matched += int(key in aligned)
         inactive_coords.append(np.round(oriented(initial), 3).tolist())
 
+binding_atoms = [a for a in active if a["chain"] == "R" and a["resi"] == 112
+                 and a["name"] in ("CA", "CB", "CG", "OD1", "OD2")]
+binding_lines = []
+inactive_binding = []
+for atom in binding_atoms:
+    xyz = oriented(atom["xyz"])
+    line = atom["line"]
+    binding_lines.append(line[:30] + "".join(f"{v:8.3f}" for v in xyz) + line[54:])
+    initial = aligned.get((atom["resi"], atom["name"], atom["resn"]), atom["xyz"])
+    inactive_binding.append(np.round(oriented(initial), 3).tolist())
+
 payload = {"pdb": "7TRS", "inactivePdb": "5DSG",
            "source": "https://www.rcsb.org/structure/7TRS",
            "receptor": "\n".join(headers + chains["R"] + ["END"]),
            "gProtein": "\n".join(headers + chains["A"] + ["TER"] + chains["B"] + ["TER"] + chains["G"] + ["END"]),
            "ligand": "\n".join(ligand + ["END"]), "inactiveCoordinates": inactive_coords,
+           "bindingSite": "\n".join(binding_lines + ["END"]),
+           "inactiveBindingCoordinates": inactive_binding,
            "alignment": {"coreResidues": len(common), "matchedBackboneAtoms": matched,
                          "rmsdAngstrom": round(float(np.sqrt(np.mean(np.sum(((source-source_mean) @ rotation + target_mean-target)**2, axis=1)))), 3)}}
 output = Path(__file__).resolve().parent.parent / "data" / "m4-gi-structure.json"

@@ -8,7 +8,8 @@
   M4 backbone residues from TM1–5 and TM7 by least-squares superposition.
 - Gα α5: residues 329–354, in the deposited receptor-coupled pose.
 
-Only protein backbone atoms and ACh heavy atoms are retained. The scFv
+Only protein backbone atoms, ACh heavy atoms and the D112 (D3.32)
+side chain for the binding-site close-up are retained. The scFv
 antibody, fusion proteins, crystallization ligands and waters are excluded.
 Secondary structure comes from the PDB HELIX/SHEET records. Resolved loops
 are rendered as part of the same cartoon as their adjacent helices;
@@ -18,6 +19,14 @@ The renderer interpolates matching inactive and active backbone coordinates
 and translates the intact Gi complex into its deposited position. This is
 an educational illustration, **not** a measured trajectory or an MD result.
 The ligand translates to its deposited pose without rotation.
+
+The animation uses the pinned renderer's cached geometry buffers. Active
+and inactive cartoon meshes are checked for identical topology before
+their positions and normals are interpolated. Gi recruitment translates
+its cached scene group, preserving subunit interfaces. The animation
+targets 60 Hz and adapts to 30 Hz when rendering exceeds its frame budget.
+Camera quaternion interpolation provides receptor, orthosteric-pocket,
+intracellular-interface and whole-complex views.
 
 Regenerate with NumPy installed:
 

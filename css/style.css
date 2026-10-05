@@ -4808,10 +4808,10 @@ body.motion-ready .main-content > :first-child.reveal-target {
     right: 1rem;
     bottom: 1rem;
     display: flex;
-    gap: 0.6rem;
+    gap: 0.8rem;
     color: #47606b;
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     pointer-events: none;
 }
 .structure-legend span::before {
@@ -4834,11 +4834,41 @@ body.motion-ready .main-content > :first-child.reveal-target {
     background: #fff;
     color: #617582;
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     line-height: 1.5;
 }
 .structure-provenance a { color: #287c8e; text-decoration: underline; text-underline-offset: 2px; }
-.molecular-animation .molecular-detail { bottom: 2.7rem; max-width: 230px; }
+.molecular-animation .molecular-detail {
+    bottom: 3.2rem;
+    max-width: min(310px, calc(100% - 2rem));
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    letter-spacing: 0;
+    padding: 0.35rem 0.55rem;
+    background: rgba(255, 255, 255, 0.88);
+    border-left: 2px solid rgba(39, 139, 155, 0.3);
+}
+.molecular-animation .molecular-toolbar { font-size: 0.72rem; letter-spacing: 0.07em; }
+.molecular-animation .molecular-playback { width: 44px; height: 44px; flex-shrink: 0; font-size: 0.8rem; }
+.molecular-animation .molecular-viewport { height: clamp(480px, 45vw, 580px); }
+.molecular-animation .molecular-phase {
+    font-family: var(--font-sans);
+    font-size: 0.84rem;
+    letter-spacing: 0;
+    padding: 0.55rem 0.75rem;
+    box-shadow: none;
+}
+.molecular-animation .molecular-axis { font-size: 0.6rem; color: #748b95; }
+.molecular-animation .molecular-timeline > span { color: #586f7a; font-family: var(--font-sans); font-size: 0.72rem; line-height: 1.45; padding-block: 0.75rem; }
+.molecular-animation .molecular-timeline > span.is-active { color: #145c70; }
+@media (max-width: 680px) {
+    .molecular-animation .molecular-viewport { height: 500px; }
+    .molecular-animation .molecular-toolbar { font-size: 0.67rem; }
+    .molecular-animation .molecular-phase { font-size: 0.8rem; }
+    .molecular-animation .molecular-timeline > span { font-size: 0.66rem; }
+    .molecular-animation .molecular-detail { font-size: 0.75rem; }
+}
 
 .molecular-fallback {
     position: absolute;
