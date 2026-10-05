@@ -4802,6 +4802,44 @@ body.motion-ready .main-content > :first-child.reveal-target {
 
 .molecular-animation.is-webgl-ready .gpcr-canvas { opacity: 1; }
 
+.structure-legend {
+    position: absolute;
+    z-index: 5;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    color: #47606b;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    pointer-events: none;
+}
+.structure-legend span::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: var(--chain-color);
+}
+.chain-receptor { --chain-color: #278b9b; }
+.chain-alpha { --chain-color: #9670bd; }
+.chain-beta { --chain-color: #54a88b; }
+.chain-gamma { --chain-color: #b4ce7e; }
+.structure-provenance {
+    margin: 0;
+    padding: 0.55rem 1rem;
+    border-top: 1px solid rgba(35, 80, 100, 0.1);
+    background: #fff;
+    color: #617582;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    line-height: 1.5;
+}
+.structure-provenance a { color: #287c8e; text-decoration: underline; text-underline-offset: 2px; }
+.molecular-animation .molecular-detail { bottom: 2.7rem; max-width: 230px; }
+
 .molecular-fallback {
     position: absolute;
     z-index: 1;

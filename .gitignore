@@ -41,3 +41,6 @@ Research/
 # Event photographs are retained locally only
 /年终聚餐*.jpg
 LRX_ML.jpg
+
+# Local website restore points
+backups/
