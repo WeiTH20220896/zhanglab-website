@@ -5162,3 +5162,40 @@ body.motion-ready .main-content > :first-child.reveal-target {
     .molecular-fallback::before { animation: none; }
     .molecular-progress { transform: scaleX(0.5); }
 }
+
+/* Wider member cards give portraits enough room without crowding the text. */
+.members-roster > .container > .row > .col-lg-10 {
+    width: 100%;
+}
+
+.members-roster .member-photo {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    background: #f8fafb;
+}
+
+.members-roster .member-photo img {
+    padding: 0;
+    object-fit: cover;
+    object-position: center 38%;
+}
+
+.members-roster .member-card--no-photo .member-info {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .members-roster .row.g-4 > [class*="col-lg-"] {
+        flex: 0 0 auto;
+        width: 33.333333%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .members-roster .row.g-4 > [class*="col-md-6"] {
+        width: 50%;
+    }
+}
